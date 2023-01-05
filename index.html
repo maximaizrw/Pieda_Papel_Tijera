@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra papel tijera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-    <script src="./js/script.js"></script>
+
+<body class="bg-gray-100 text-blue-900 font-semibold">
+    <div class="container px-10 py-6">
+        <div class="flex justify-end">
+            <button id="restart" class="text-2xl text-blue-900 flex items-center group">
+                <img class="group-hover:rotate-90 transition-all " draggable="false" src="img/refresh.svg">RESET
+            </button>
+
+        </div>
+
+        <div class="counter flex justify-center items-center">
+            <h1 class="score">
+                <span class="text-xl">Yo</span>
+                <span class="text-8xl" id="playerScore">0</span>
+                <span class="text-8xl">:</span>
+                <span class="text-8xl" id="computerScore">0</span>
+                <span class="text-xl">Bot</span>
+            </h1>
+        </div>
+        <div class="signs actions flex items-center justify-center gap-x-7 py-10">
+            <button value="piedra" class="w-60 h-60 flex items-center justify-center bg-white rounded-2xl hover:bg-gray-200">
+                <img class="w-1/2" draggable="false" src="img/rock.png" alt="">
+            </button>
+            <button value="papel" class="w-60 h-60 flex items-center justify-center bg-white rounded-2xl hover:bg-gray-200">
+                <img class="w-1/2" draggable="false" src="img/paper.png" alt="">
+            </button>
+            <button value="tijera" class="w-60 h-60 flex items-center justify-center bg-white rounded-2xl hover:bg-gray-200">
+                <img class="w-1/2" draggable="false" src="img/scissors.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="text-center">
+        <h2 id="status" class="status text-6xl"></h2>
+        <h2 id="winner" class="text-2xl"></h2>
+    </div>
+
+
+
+    <script src="./js/game.js"></script>
 </body>
+
 </html>
